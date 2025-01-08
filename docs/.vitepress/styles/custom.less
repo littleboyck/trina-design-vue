@@ -1,0 +1,138 @@
+// 覆写 start
+._example_8jhae_2{
+  margin-bottom: 0;
+}
+li {
+  font-size: 14px;
+}
+// 覆写 end
+
+.language-icon{
+  // 如果你是在md文件中使用
+  background: url('/assets/language.svg'); 
+
+  // 如果你在.vitepress/config.mjs使用
+  // background: url('../../public/language.svg');
+
+  background-size: cover;
+  width: 16px;
+  height: 14px;
+  display: inline-flex;
+}
+
+.VPSidebarItem.is-active {
+  .sub-text{
+    display: inline-flex;
+    margin-left: 8px;
+    font-size: 12px;
+    color: var(--vp-c-indigo-1);
+  }
+}
+.sub-text{
+  display: inline-flex;
+  margin-left: 8px;
+  font-size: 12px;
+  color: var(--vp-c-text-3);
+}
+
+// 栅格系统案例样式 start
+
+.ant-row > .ant-col{
+  color: #ffffff;
+  text-align: center;
+}
+
+.grid-demo-rowbg{
+  .ant-row {
+    background-color:rgba(128,128,128,.08);
+  }
+}
+
+.grid-demo{
+  .ant-row > .ant-col:nth-child(2n+1){
+    background-color: var(--demo-grid-color-75);
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding: 16px 0;
+  }
+  .ant-row > .ant-col:nth-child(2n){
+    background-color: var(--demo-grid-color);
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding: 16px 0;
+  }
+}
+
+// 栅格系统案例样式 end
+
+.ant-divider{
+  .ant-divider-inner-text{
+    color: var(--vp-c-text-1);
+  }
+}
+
+.ant-slider{
+  .ant-slider-mark{
+    &-text{
+      color: var(--vp-c-text-1);
+    }
+  }
+}
+
+
+.dark {
+  .ant-slider {
+    .ant-slider-rail{
+      background-color: var(--vp-c-gray-3) !important;
+    }
+  }
+  .ant-btn.ant-btn-text:not(.ant-btn-dangerous){
+    color: var(--vp-c-text-1) !important;
+  }
+  .ant-btn:disabled {
+    color: var(--vp-c-text-2) !important;
+  }
+}
+
+h6{
+  margin-top: 60px;
+}
+
+
+
+
+
+
+
+
+// 通用样式
+
+.grid{
+  display: grid;
+  &-col-2{
+    grid-template-columns: repeat(2, 1fr);
+  }
+  &-col-3{
+    grid-template-columns: repeat(3, 1fr);
+  }
+  &-item{
+    margin-bottom: 16px; /* 每个元素的间距 */
+    border-radius: 4px;
+    break-inside: avoid; /* 防止跨列 */
+    overflow: hidden;
+  }
+}
+
+.text-center{
+  text-align: center;
+}
+
+.color-white{
+  color: #ffffff;
+}
+
+
+.flex-waterfall{
+  display: flex;
+  width: 100%;
+}

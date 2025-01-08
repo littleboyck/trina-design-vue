@@ -1,0 +1,48 @@
+{
+  "name": "@cztrina/design-vue",
+  "version": "1.1.0",
+  "description": "this is a vite build dir",
+  "publishConfig": {
+    "access": "public"
+  },
+  "type": "module",
+  "main": "lib/index.cjs",
+  "module": "es/index.mjs",
+  "exports": {
+    ".": {
+      "import": "./es/index.mjs",
+      "require": "./lib/index.cjs"
+    },
+    "./es": "./es/index.mjs",
+    "./lib": "./lib/index.cjs",
+    "./lib/util/*": "./lib/util/*.cjs",
+    "./es/util/*": "./es/util/*.mjs",
+    "./*": "./*"
+  },
+  "files": [
+    "lib",
+    "es",
+    "umd",
+    "README.md",
+    "package.json"
+  ],
+  "sideEffects": [
+    "**/*.css"
+  ],
+  "scripts": {
+    "build:lib": "vite build --config vite.build.config.js",
+    "build:umd": "vite build --config vite.bundle.config.js",
+    "build": "npm run build:lib & npm run build:umd",
+    "public": "npm publish --registry=https://registry.npmjs.org/",
+    "login": "npm login --registry=https://registry.npmjs.org/"
+  },
+  "keywords": [],
+  "author": "littleboyck",
+  "license": "ISC",
+  "dependencies": {
+    "ant-design-vue": "4.x"
+  },
+  "peerDependencies": {
+    "vue": ">=3.2.0"
+  }
+}

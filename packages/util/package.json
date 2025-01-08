@@ -1,0 +1,11 @@
+{
+  "name": "@cztrina/util",
+  "private": true,
+  "version": "1.0.0",
+  "description": "",
+  "author": "",
+  "license": "ISC",
+  "main": "index.js",
+  "module": "index.js",
+  "type": "module"
+}
